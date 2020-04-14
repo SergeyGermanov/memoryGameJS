@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let card = document.createElement("img");
       card.setAttribute("src", "images/blank.png");
       card.setAttribute("data-id", i);
-      //   card.addEventListener('click', flipCard);
+      card.addEventListener("click", flipCard);
       grid.appendChild(card);
     }
   }
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let cards = document.querySelectorAll("img");
     const optionOneId = cardsChosenId[0];
     const optionTwoId = cardsChosenId[1];
-    if (cardsChosen[0] === cardsChosenId[1]) {
+    if (cardsChosen[0] === cardsChosen[1]) {
       alert("You found a match!");
       cards[optionOneId].setAttribute("src", "images/white.png");
       cards[optionTwoId].setAttribute("src", "images/white.png");
